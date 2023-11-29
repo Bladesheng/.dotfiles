@@ -51,6 +51,12 @@ local plugins = {
     cmd = { "Git", "G", "Gdiff" },
   },
 
+  {
+    -- Detect tabstop and shiftwidth automatically
+    'tpope/vim-sleuth',
+    lazy = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
