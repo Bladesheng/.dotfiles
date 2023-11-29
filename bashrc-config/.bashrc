@@ -119,7 +119,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 #alias kitty=~/.local/kitty.app/bin/kitty
 
-alias nvim=~/nvim/bin/nvim
+export PATH="$PATH:$HOME/nvim/bin"
 
 alias lg=lazygit
 ## MY CUSTOM STUFF - END
