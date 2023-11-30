@@ -15,3 +15,9 @@ os:
 
 promptToReturnFromSubprocess: false
 
+gui:
+  theme:
+    selectedLineBgColor:
+      - '#252931'
+    selectedRangeBgColor:
+      - '#252931'
