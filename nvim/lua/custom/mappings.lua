@@ -12,6 +12,8 @@ M.general = {
     -- keep search results in the middle
     ["n"] = { "nzzzv" },
     ["N"] = { "Nzzzv" },
+
+    ["<leader>gg"] = { ":FloatermNew --height=0.95 --width=0.95 --title=lazygit lazygit<CR>", "open lazygit in floaterm" }
   },
   v = {
     [">"] = { ">gv", "indent"},

@@ -2,3 +2,13 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
+
+os:
+  # thanks to this chad for saving me so much headache
+  # https://github.com/cloudre01/dotfiles/blob/main/private_Library/private_Application%20Support/lazygit/config.yml
+  # https://github.com/cloudre01/nvim/blob/main/lua/user/toggleterm.lua#L44
+  # https://github.com/cloudre01/nvim/blob/main/lua/keymaps.lua#L73
+  #
+  # close floaterm windows with lazygit and open the file in current nvim instance as new tab 
+  edit: "nvim --server $NVIM --remote-send '<CMD>q<CR><CMD>lua vim.cmd(\"e \" .. {{filename}})<CR>'"
+

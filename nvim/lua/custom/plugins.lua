@@ -57,6 +57,24 @@ local plugins = {
     lazy = false,
   },
 
+  {
+    'voldikss/vim-floaterm',
+    cmd = { "FloatermNew" },
+    -- lazy = false,
+  },
+  -- This one also works, just make sure to add this to mappings.lua. Floaterm seems to work better tho
+  --
+  -- ["<leader>gg"] = { ":LazyGit<CR>", opts = { silent = true } }
+  --
+  -- {
+  --   "kdheepak/lazygit.nvim",
+  --   lazy = false,
+  --   -- optional for floating window border decoration
+  --   dependencies = {
+  --       "nvim-lua/plenary.nvim",
+  --   },
+  -- },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

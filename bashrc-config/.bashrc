@@ -117,10 +117,14 @@ alias pn=pnpm
 
 export PATH=$PATH:/usr/local/go/bin
 
-#alias kitty=~/.local/kitty.app/bin/kitty
-
-alias nvim=~/nvim/bin/nvim
+export PATH="$PATH:$HOME/nvim/bin"
 
 alias lg=lazygit
+
+export PATH="$PATH:$HOME/.local/bin"
+
+# alias nvim='nvim --listen /tmp/nvim-server.pipe'
+# alias nvim="nvim --listen /tmp/nvimsocket"
+
 ## MY CUSTOM STUFF - END
 
