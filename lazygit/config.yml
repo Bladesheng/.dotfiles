@@ -11,4 +11,7 @@ os:
   #
   # close floaterm windows with lazygit and open the file in current nvim instance as new tab 
   edit: "nvim --server $NVIM --remote-send '<CMD>q<CR><CMD>lua vim.cmd(\"e \" .. {{filename}})<CR>'"
+  editAtLine: "nvim --server $NVIM --remote-send '<CMD>q<CR><CMD>lua vim.cmd(\"e \" .. {{filename}})<CR>{{line}}G'"
+
+promptToReturnFromSubprocess: false
 
