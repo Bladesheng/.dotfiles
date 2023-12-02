@@ -6,5 +6,5 @@
 --   command = "tabdo wincmd =",
 -- })
 
-require("custom.autocommands")
-require("custom.options")
+require "custom.autocommands"
+require "custom.options"
