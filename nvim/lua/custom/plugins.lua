@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -7,15 +7,6 @@ local plugins = {
 
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      -- format & linting
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require "custom.configs.null-ls"
-        end,
-      },
-    },
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
@@ -25,7 +16,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -53,12 +44,12 @@ local plugins = {
 
   {
     -- Detect tabstop and shiftwidth automatically
-    'tpope/vim-sleuth',
+    "tpope/vim-sleuth",
     lazy = false,
   },
 
   {
-    'voldikss/vim-floaterm',
+    "voldikss/vim-floaterm",
     cmd = { "FloatermNew" },
     -- lazy = false,
   },
@@ -74,6 +65,43 @@ local plugins = {
   --       "nvim-lua/plenary.nvim",
   --   },
   -- },
+
+  {
+    "stevearc/conform.nvim",
+    event = "BufWritePre", -- load the plugin before saving
+    opts = {},
+    config = function()
+      local conform = require "conform"
+
+      conform.setup {
+        formatters_by_ft = {
+          lua = { "stylua" },
+
+          html = { "prettierd" },
+          css = { "prettierd" },
+          scss = { "prettierd" },
+          javascript = { "prettierd" },
+          javascriptreact = { "prettierd" },
+          typescript = { "prettierd" },
+          typescriptreact = { "prettierd" },
+          svelte = { "prettierd" },
+          json = { "prettierd" },
+          markdown = { "prettierd" },
+          yaml = { "prettierd" },
+        },
+
+        format_on_save = function(bufnr)
+          -- Disable autoformat for files in a certain path
+          local bufname = vim.api.nvim_buf_get_name(bufnr)
+          if bufname:match "/node_modules/" then
+            return
+          end
+
+          return { timeout_ms = 500, lsp_fallback = true, async = true }
+        end,
+      }
+    end,
+  },
 
   -- To make a plugin not be loaded
   -- {
