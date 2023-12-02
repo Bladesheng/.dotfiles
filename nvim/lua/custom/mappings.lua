@@ -17,6 +17,8 @@ M.general = {
       ":FloatermNew --height=0.95 --width=0.95 --title=lazygit lazygit<CR>",
       "open lazygit in floaterm",
     },
+
+    ["<leader>R"] = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Live replace" },
   },
   v = {
     [">"] = { ">gv", "indent" },
