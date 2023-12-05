@@ -15,6 +15,7 @@ M.treesitter = {
     "bash",
     "svelte",
     "go",
+    "php",
   },
   indent = {
     enable = true,
@@ -39,6 +40,9 @@ M.mason = {
     "svelte-language-server",
 
     "gopls",
+
+    "phpactor",
+
     "yaml-language-server",
 
     -- c/cpp stuff
