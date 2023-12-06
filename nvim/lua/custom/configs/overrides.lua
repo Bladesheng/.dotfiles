@@ -52,6 +52,8 @@ M.mason = {
 
     "yaml-language-server",
 
+    "bash-language-server",
+
     "clangd",
   },
 }

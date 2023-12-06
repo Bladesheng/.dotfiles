@@ -11,7 +11,7 @@ local servers = {
   "cssls",
   "tailwindcss",
   "tsserver",
-  -- "denols"
+  -- "denols",
   "svelte",
 
   "gopls",
@@ -19,6 +19,8 @@ local servers = {
   "phpactor",
 
   "yamlls",
+
+  "bashls",
 
   "clangd",
 }
