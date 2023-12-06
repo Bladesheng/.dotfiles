@@ -88,6 +88,8 @@ local plugins = {
           json = { "prettierd" },
           markdown = { "prettierd" },
           yaml = { "prettierd" },
+
+          php = { "php_cs_fixer" },
         },
 
         format_on_save = function(bufnr)

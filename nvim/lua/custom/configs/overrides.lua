@@ -42,6 +42,7 @@ M.mason = {
     "gopls",
 
     "phpactor",
+    "php-cs-fixer",
 
     "yaml-language-server",
 
