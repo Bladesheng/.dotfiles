@@ -38,6 +38,7 @@ M.mason = {
     "stylua",
 
     "html-lsp",
+    "emmet-language-server",
     "css-lsp",
     "tailwindcss-language-server",
     "typescript-language-server",
