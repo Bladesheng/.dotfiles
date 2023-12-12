@@ -105,6 +105,20 @@ local plugins = {
     end,
   },
 
+  {
+    "kkoomen/vim-doge",
+    -- @TODO better lazy loading
+    cmd = { "DogeGenerate" },
+    event = { "BufReadPost" },
+    -- keys = { "dg", "<leader>dg" },
+
+    build = ":call doge#install()",
+    init = function()
+      vim.g.doge_enable_mappings = 0
+      -- vim.api.nvim_command "filetype plugin on"
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

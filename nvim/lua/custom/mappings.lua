@@ -19,6 +19,13 @@ M.general = {
     },
 
     ["<leader>R"] = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Live replace" },
+
+    ["<leader>dg"] = {
+      function()
+        vim.cmd [[call doge#generate('')]]
+      end,
+      "Generate comment block with DoGe",
+    },
   },
   v = {
     [">"] = { ">gv", "indent" },
