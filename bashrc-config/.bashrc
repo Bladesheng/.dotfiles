@@ -107,9 +107,11 @@ esac
 export FLYCTL_INSTALL="/home/radek/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
-alias upgrade='sudo apt update -y && sudo apt dist-upgrade -y'
-alias upgradeOff='sudo apt update -y && sudo apt dist-upgrade -y && systemctl poweroff'
-alias upgradeReboot='sudo apt update -y && sudo apt dist-upgrade -y && systemctl reboot'
+alias upgrade='sudo apt update -y && sudo apt upgrade -y'
+alias upgradeOff='sudo apt update -y && sudo apt upgrade -y && systemctl poweroff'
+alias upgradeReboot='sudo apt update -y && sudo apt upgrade -y && systemctl reboot'
+alias distUpgrade='sudo apt update -y && sudo apt dist-upgrade'
+
 alias poweroff='systemctl poweroff'
 alias reboot='systemctl reboot'
 
