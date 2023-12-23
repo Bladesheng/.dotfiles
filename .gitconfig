@@ -8,7 +8,8 @@
 [pull]
 	rebase = false
 [core]
-	editor = nvim
+	editor = code --wait
+	# editor = nvim
 	pager = delta
 
 [interactive]
