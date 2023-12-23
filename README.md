@@ -1,8 +1,11 @@
 # .dotfiles
 
-- lazygit setup
-https://github.com/dandavison/delta
-dpkg -i file.deb
+ln -s ~/.config/bashrc-config/.bashrc ~/.bashrc
 
 ln -s ~/.config/.gitconfig ~/.gitconfig
 
+-   lazygit
+    https://github.com/jesseduffield/lazygit
+
+-   delta
+    https://github.com/dandavison/delta
