@@ -125,8 +125,6 @@ alias lg=lazygit
 
 export PATH="$PATH:$HOME/.local/bin"
 
-# alias nvim='nvim --listen /tmp/nvim-server.pipe'
-# alias nvim="nvim --listen /tmp/nvimsocket"
+export PATH="$PATH:$HOME/apache-maven/bin"
 
 ## MY CUSTOM STUFF - END
-
