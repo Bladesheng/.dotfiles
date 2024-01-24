@@ -125,6 +125,8 @@ alias lg=lazygit
 
 export PATH="$PATH:$HOME/.local/bin"
 
+export PATH="$PATH:/opt/jdk/bin"
+export JAVA_HOME="/opt/jdk"
 export PATH="$PATH:$HOME/apache-maven/bin"
 
 ## MY CUSTOM STUFF - END
