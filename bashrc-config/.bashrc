@@ -90,7 +90,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# node stuff
+export PATH="$PATH:$HOME/.local/bin"
+
+# node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -101,32 +103,28 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
+alias pn=pnpm
 
-## MY CUSTOM STUFF - START
+# fly.io
 export FLYCTL_INSTALL="/home/radek/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
-alias upgrade='sudo apt update -y && sudo apt upgrade -y'
-alias upgradeOff='sudo apt update -y && sudo apt upgrade -y && systemctl poweroff'
-alias upgradeReboot='sudo apt update -y && sudo apt upgrade -y && systemctl reboot'
-alias distUpgrade='sudo apt update -y && sudo apt dist-upgrade'
-
 alias poweroff='systemctl poweroff'
 alias reboot='systemctl reboot'
+alias upgrade='sudo apt update -y && sudo apt full-upgrade -y'
+alias upgradeOff='upgrade && poweroff'
+alias upgradeReboot='upgrade && reboot'
 
-alias pn=pnpm
-
+# go
 export PATH=$PATH:/usr/local/go/bin
 
+# nvim
 export PATH="$PATH:$HOME/nvim/bin"
 
+# lazygit
 alias lg=lazygit
 
-export PATH="$PATH:$HOME/.local/bin"
-
+# java & stuff
 export PATH="$PATH:/opt/jdk/bin"
 export JAVA_HOME="/opt/jdk"
 export PATH="$PATH:$HOME/apache-maven/bin"
-
-## MY CUSTOM STUFF - END
